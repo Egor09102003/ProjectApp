@@ -40,6 +40,12 @@ public class Photo_upload extends AppCompatActivity {
         });
 
     }
+
+    public void startWarning(View view) {
+        Intent intent = new Intent(this, Warning.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);

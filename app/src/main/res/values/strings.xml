@@ -11,4 +11,9 @@
     <string name="main_text_instruction">Автоматическое определение нейроной сетью типа личности, характера Вас и вашего партнера, социометрических данных и оценка на основе статистики браков/разводов.</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="main_text_warning">•В аксессуаре, частично закрывающем лицо(очки, маска, головной убор)\n
+•Некоторые части лица обрезаны кадром\n
+•На фотографии находится несколько человек\n
+•Фотографии с искажением лица, вызванным эмоциями\n
+•Лицо направлено не в кадр</string>
 </resources>

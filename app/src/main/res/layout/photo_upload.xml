@@ -29,6 +29,7 @@
     <Button
         android:id="@+id/warning_button"
         android:layout_width="wrap_content"
+        android:onClick="startWarning"
         android:layout_height="wrap_content"
         android:background="@drawable/warning_button_design"
         android:contentDescription="warning_button"
