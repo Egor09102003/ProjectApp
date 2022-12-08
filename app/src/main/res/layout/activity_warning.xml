@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor"
+    tools:context=".Warning">
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/title_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Какие фотографии не подойдут?"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:lineHeight="23dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="casual"
+        android:text="@string/main_text_warning"
+        android:textColor="@color/main_color"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        app:srcCompat="@drawable/photo_warning" />
+
+    <ImageButton
+        android:id="@+id/button_warning_back"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="670dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="startMain"
+        android:contentDescription="button_warning_back"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/warning_back" />
+
+</RelativeLayout>
