@@ -19,4 +19,9 @@ public class Main_page extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startInstruction(View view) {
+        Intent intent = new Intent(this, Instruction.class);
+        startActivity(intent);
+    }
+
 }
