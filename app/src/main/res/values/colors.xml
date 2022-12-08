@@ -4,9 +4,11 @@
     <color name="main_color">#005F82</color>
     <color name="main_color_pink">#F2297B</color>
     <color name="black">#FF000000</color>
-    <color name="purple_500">#8B00FF</color>
+    <color name="purple_500">#FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple_700">#8B00F1</color>
+    <color name="purple_700">#FFFFFF</color>
+    <color name="purple_200">#FFFFFF</color>
+    <color name="color_upload_men">#C8D7FF</color>
     <color name="teal_200">#FFFFFFF1</color>
     <color name="teal_700">#FFFFFFF2</color>
 </resources>

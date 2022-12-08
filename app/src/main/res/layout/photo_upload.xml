@@ -23,6 +23,7 @@
             android:text="@string/main_text_upload_page"
             android:textColor="@color/white"
             android:textSize="17sp" />
+
     </FrameLayout>
 
     <Button
@@ -36,5 +37,48 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/main_color_pink"
         android:textSize="9sp" />
+
+    <ImageView
+        android:id="@+id/image_warning_left"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="157dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:src="@drawable/icon_for_warning" />
+
+    <ImageView
+        android:id="@+id/image_warning_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="157dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_for_warning" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="255dp"
+        android:layout_height="144dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:src="@drawable/male_upload" />
+
+    <ImageView
+        android:id="@+id/test_view"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="110dp"
+        android:src="@drawable/photo_1_m" />
+
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="110dp"
+        android:text="Загрузка"
+        android:layout_marginTop="400dp" />
+
 
 </RelativeLayout>
