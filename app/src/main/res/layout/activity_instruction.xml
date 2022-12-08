@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor"
+    tools:context=".Instruction">
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/title_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Инструкция:" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:src="@drawable/instructions_1" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_instruction_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_button_design"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="640dp"
+        android:onClick="startMain"
+        android:textColor="@color/main_color_pink"
+        android:text="   Вернуться на главную   " />
+
+    <TextView
+        android:id="@+id/main_text_instruction"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/main_text_instruction"
+        android:textAlignment="center"
+        android:textColor="@color/main_color"
+        android:textSize="10sp" />
+
+    <FrameLayout
+        android:layout_width="291dp"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="376dp">
+
+        <ImageView
+            android:id="@+id/main_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/instruction_2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="302dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/icons_instruction" />
+    </FrameLayout>
+
+</RelativeLayout>

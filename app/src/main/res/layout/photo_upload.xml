@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/text_upload"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:contentDescription="title_upload"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
