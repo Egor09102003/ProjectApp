@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor"
+    tools:context=".Main_page">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/title_main_page"
+        android:layout_width="126dp"
+        android:layout_height="152dp"
+        app:constraint_referenced_ids="layout_header_title,header_title" />
+
+    <FrameLayout
+        android:id="@+id/layout_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:contentDescription="header_title"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/main_text_main_page"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:layout_marginTop="340dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="206dp"
+            android:layout_height="182dp"
+            android:background="@color/white"
+            android:contentDescription="button2"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/button2_main" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="203dp"
+            android:layout_height="182dp"
+            android:background="@color/white"
+            android:contentDescription="button1"
+            app:layout_column="0"
+            app:layout_row="0"
+            android:onClick="startUpload"
+            app:srcCompat="@drawable/button1_main" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="205dp"
+            android:layout_height="174dp"
+            android:background="@color/white"
+            android:contentDescription="button3"
+            app:layout_column="0"
+            app:layout_row="1"
+            android:onClick="startInstruction"
+            app:srcCompat="@drawable/button3_main" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="205dp"
+            android:layout_height="173dp"
+            android:contentDescription="button4"
+            app:layout_column="2"
+            app:layout_row="1"
+            android:background="@color/white"
+            app:srcCompat="@drawable/button4_main" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/male"
+        android:contentDescription="male_picture"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/male" />
+
+    <ImageView
+        android:id="@+id/female"
+        android:contentDescription="female_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        app:srcCompat="@drawable/female" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="title"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="27sp"
+        android:text="Выберите опцию:"
+        android:textAlignment="center"
+        android:textColor="@color/main_color" />
+
+</RelativeLayout>
