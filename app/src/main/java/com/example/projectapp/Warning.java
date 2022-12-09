@@ -15,7 +15,7 @@ public class Warning extends AppCompatActivity {
     }
 
     public void startMain(View view) {
-        Intent intent = new Intent(this, Main_page.class);
+        Intent intent = new Intent(this, Photo_upload.class);
         startActivity(intent);
     }
 }
