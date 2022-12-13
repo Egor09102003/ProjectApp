@@ -22,13 +22,13 @@ public class Feedback extends AppCompatActivity {
 
     public void startVK(View view) {
         Intent browserIntent = new
-                Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/dari_inel"));
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/id90052246"));
         startActivity(browserIntent);
     }
 
     public void startTelegram(View view) {
         Intent browserIntent = new
-                Intent(Intent.ACTION_VIEW, Uri.parse("https://web.telegram.org/z/#5742945734"));
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/m_shtark"));
         startActivity(browserIntent);
     }
 }
