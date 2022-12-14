@@ -7,6 +7,11 @@
     android:background="@color/MainBackgroundColor"
     tools:context=".Photo_upload">
 
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView8,imageButton8" />
+
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
         android:layout_width="match_parent"
@@ -44,13 +49,13 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="157dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="55dp"
         android:src="@drawable/icon_for_warning" />
 
     <ImageView
         android:id="@+id/image_warning_right"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="65dp"
+        android:layout_marginRight="55dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="157dp"
@@ -84,15 +89,29 @@
 
     <ImageButton
         android:id="@+id/imageButton8"
-        android:layout_width="100dp"
-        android:layout_height="107dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="680dp"
-        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="33dp"
+        android:layout_marginRight="12dp"
         android:background="@color/white"
         android:contentDescription="button_to_questionnaire12"
         android:onClick="startQuestionnaire12"
-        app:srcCompat="@drawable/button_questionnaire" />
+        app:srcCompat="@drawable/button_next_q" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Далее"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
 
 
 </RelativeLayout>

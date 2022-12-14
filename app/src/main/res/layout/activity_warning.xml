@@ -48,13 +48,14 @@
 
     <ImageButton
         android:id="@+id/button_warning_back"
+        android:layout_width="66dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
         android:background="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="670dp"
-        android:layout_marginLeft="15dp"
-        android:onClick="startMain"
         android:contentDescription="button_warning_back"
-        android:layout_height="80dp"
+        android:onClick="startMain"
         app:srcCompat="@drawable/warning_back" />
 
 </RelativeLayout>
