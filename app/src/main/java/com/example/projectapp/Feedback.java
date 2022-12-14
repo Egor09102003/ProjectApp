@@ -14,7 +14,7 @@ public class Feedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+      //  this.requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
     public void startMain(View view) {

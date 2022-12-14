@@ -14,7 +14,7 @@ public class Instruction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+     //   this.requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
     public void startMain(View view) {

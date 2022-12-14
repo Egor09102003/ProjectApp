@@ -27,7 +27,7 @@ public class Photo_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_upload);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+      //  this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         view = (ImageView) findViewById(R.id.test_view);
         Button PickImage = (Button) findViewById(R.id.test_button);
