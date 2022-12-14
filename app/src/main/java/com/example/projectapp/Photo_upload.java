@@ -46,6 +46,11 @@ public class Photo_upload extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startQuestionnaire12(View view) {
+        Intent intent = new Intent(this, Questionnaire_1_2.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);

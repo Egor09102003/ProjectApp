@@ -81,5 +81,17 @@
         android:text="Загрузка"
         android:layout_marginTop="400dp" />
 
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="100dp"
+        android:layout_height="107dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="680dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:contentDescription="button_to_questionnaire12"
+        android:onClick="startQuestionnaire12"
+        app:srcCompat="@drawable/button_questionnaire" />
+
 
 </RelativeLayout>

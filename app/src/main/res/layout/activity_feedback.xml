@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/warning_button_design"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="640dp"
+        android:layout_marginTop="660dp"
         android:onClick="startMain"
         android:textColor="@color/main_color_pink"
         android:text="   Вернуться на главную   " />
