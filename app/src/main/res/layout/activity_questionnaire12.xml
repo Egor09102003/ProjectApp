@@ -68,14 +68,14 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input1"
-                    android:layout_width="150dp"
+                    android:layout_width="161dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Введите разницу(см)"
                     android:inputType="number"
                     android:lines="1"
-                    android:textAlignment="center"
                     android:maxLength="2"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -125,11 +125,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input2"
-                    android:layout_width="150dp"
+                    android:layout_width="161dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Введите разницу(кг)"
                     android:inputType="number"
+                    android:textAlignment="center"
                     android:lines="1"
                     android:maxLength="3"
                     android:textColor="@color/white"
