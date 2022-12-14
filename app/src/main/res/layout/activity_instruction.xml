@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="640dp"
         android:onClick="startMain"
-        android:textColor="@color/main_color_pink"
+        android:textColor="@drawable/warning_button_design"
         android:text="   Вернуться на главную   " />
 
     <TextView

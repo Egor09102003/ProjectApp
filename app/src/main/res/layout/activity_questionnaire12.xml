@@ -146,7 +146,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="660dp"
         android:onClick="startCheck"
-        android:textColor="@color/main_color_pink"
+        android:textColor="@drawable/warning_button_design"
         android:text="Далее" />
 
     <TextView
