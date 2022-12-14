@@ -27,14 +27,16 @@ public class Questionnaire_1_2 extends AppCompatActivity {
         Integer num1 = Integer.parseInt(answer1);
         String answer2 = ((EditText) findViewById(R.id.input2)).getText().toString();
         Integer num2 = Integer.parseInt(answer2);
-        if(num1 < 60 && num2 < 100){
+
+        if(num1 < 60 & num2 < 100) {
             Intent intent = new Intent(this, Questionnaire_3_4.class);
             startActivity(intent);
         }
-        else{
+        else {
             TextView textWarning = (TextView) findViewById(R.id.textView11);
             textWarning.setText("Введенные данные некорректны");
         }
+
 
     }
 

@@ -26,6 +26,11 @@ public class Main_page extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startDo(View view) {
+        Intent intent = new Intent(this, How_it_works.class);
+        startActivity(intent);
+    }
+
     public void startFeedback(View view) {
         Intent intent = new Intent(this, Feedback.class);
         startActivity(intent);

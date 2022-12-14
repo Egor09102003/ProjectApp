@@ -47,6 +47,7 @@
             android:background="@color/white"
             android:contentDescription="button2"
             app:layout_column="2"
+            android:onClick="startDo"
             app:layout_row="0"
             app:srcCompat="@drawable/button2_main" />
 
