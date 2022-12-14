@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ public class Photo_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_upload);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         view = (ImageView) findViewById(R.id.test_view);
         Button PickImage = (Button) findViewById(R.id.test_button);

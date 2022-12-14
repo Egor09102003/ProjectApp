@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="title_upload"
+            android:textAlignment="center"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="Пожалуйста, пройдите опрос:"
@@ -61,18 +62,19 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_input1"
                 android:layout_width="197dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/input_field_design">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input1"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Введите разницу(см)"
                     android:inputType="number"
                     android:lines="1"
+                    android:textAlignment="center"
                     android:maxLength="2"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -117,13 +119,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_input2"
                 android:layout_width="197dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/input_field_design">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input2"
-                    android:layout_width="170dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Введите разницу(кг)"
