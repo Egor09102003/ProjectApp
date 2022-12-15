@@ -38,6 +38,7 @@ public class Photo_upload extends AppCompatActivity {
     ImageView view5;
     ImageView view6;
     int flag = 0;
+    int cnt = 0;
     int PICK_IMAGE_MULTIPLE = 1;
     String imageEncoded;
     List<String> imagesEncodedList;
@@ -90,8 +91,14 @@ public class Photo_upload extends AppCompatActivity {
     }
 
     public void startQuestionnaire12(View view) {
-        Intent intent = new Intent(this, Questionnaire_1_2.class);
-        startActivity(intent);
+        if(cnt == 2) {
+            Intent intent = new Intent(this, Questionnaire_1_2.class);
+            startActivity(intent);
+        }
+        else{
+            TextView textWarning = (TextView) findViewById(R.id.textView12);
+            textWarning.setText("Пожалуйста, загрузите по 3 фотографии");
+        }
     }
 
     @Override
@@ -102,6 +109,7 @@ public class Photo_upload extends AppCompatActivity {
                 if(data.getClipData() != null) {
                     int count = data.getClipData().getItemCount(); //evaluate the count before the for loop --- otherwise, the count is evaluated every loop.
                     if(count == 3){
+                        cnt += 1;
                         TextView textWarning = (TextView) findViewById(R.id.textView12);
                         textWarning.setText("");
                         Uri imageUri1 = data.getClipData().getItemAt(0).getUri();
