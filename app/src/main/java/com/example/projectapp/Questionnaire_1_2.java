@@ -36,9 +36,5 @@ public class Questionnaire_1_2 extends AppCompatActivity {
             TextView textWarning = (TextView) findViewById(R.id.textView11);
             textWarning.setText("Введенные данные некорректны");
         }
-
-
     }
-
-
 }
