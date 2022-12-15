@@ -82,7 +82,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginRight="25dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Далее"
         android:textColor="@color/black"
