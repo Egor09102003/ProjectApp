@@ -16,4 +16,15 @@
         android:layout_centerVertical="true"
         android:fontFamily="@font/roboto_bold"
         android:text="Извините, данный материал ещё не написан :(" />
+
+    <Button
+        android:id="@+id/button"
+        android:background="@drawable/warning_button_design"
+        android:layout_width="150dp"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:onClick="startMain"
+        android:textColor="@drawable/warning_button_design"
+        android:text="Назад" />
 </RelativeLayout>
