@@ -102,6 +102,8 @@ public class Photo_upload extends AppCompatActivity {
                 if(data.getClipData() != null) {
                     int count = data.getClipData().getItemCount(); //evaluate the count before the for loop --- otherwise, the count is evaluated every loop.
                     if(count == 3){
+                        TextView textWarning = (TextView) findViewById(R.id.textView12);
+                        textWarning.setText("");
                         Uri imageUri1 = data.getClipData().getItemAt(0).getUri();
                         Uri imageUri2 = data.getClipData().getItemAt(1).getUri();
                         Uri imageUri3 = data.getClipData().getItemAt(2).getUri();
