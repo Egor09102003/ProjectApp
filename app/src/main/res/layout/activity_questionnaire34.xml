@@ -123,11 +123,13 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="80dp"
-                android:onClick="startYes"
-                android:background="@drawable/click_button"
-                android:textColor="@drawable/click_button"
+                android:background="@drawable/check_button"
                 android:contentDescription="left"
-                android:text="Есть" />
+                android:text="Есть"
+                android:textColor="@drawable/click_button"
+                android:onClick="yes"
+                tools:ignore="TouchTargetSizeCheck"
+                />
 
             <Button
                 android:id="@+id/button3"
@@ -135,11 +137,11 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="80dp"
-                android:onClick="startNo"
-                android:background="@drawable/click_button"
-                android:textColor="@drawable/click_button"
+                android:background="@drawable/check_button"
                 android:contentDescription="right"
-                android:text="Нет" />
+                android:text="Нет"
+                android:onClick="no"
+                android:textColor="@drawable/click_button" />
         </FrameLayout>
 
     </LinearLayout>

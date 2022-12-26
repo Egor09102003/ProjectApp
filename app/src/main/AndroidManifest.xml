@@ -13,6 +13,27 @@
         android:theme="@style/Theme.ProjectApp"
         tools:targetApi="31">
         <activity
+            android:name=".Questionnaire_11_12"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Questionnaire_9_10"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Questionnaire_7_8"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Questionnaire_5_6"
             android:exported="false">
             <meta-data

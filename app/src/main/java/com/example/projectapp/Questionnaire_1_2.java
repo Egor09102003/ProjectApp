@@ -24,12 +24,25 @@ public class Questionnaire_1_2 extends AppCompatActivity {
 
     public void startCheck(View view) {
         String answer1 = ((EditText) findViewById(R.id.input1)).getText().toString();
-        Integer num1 = Integer.parseInt(answer1);
+        Integer num1;
+        if (answer1.isEmpty()) {
+            num1 = -1;
+        } else {
+            num1 = Integer.parseInt(answer1);
+        }
         String answer2 = ((EditText) findViewById(R.id.input2)).getText().toString();
-        Integer num2 = Integer.parseInt(answer2);
+        Integer num2;
+        if (answer2.isEmpty()) {
+            num2 = -1;
+        } else {
+            num2 = Integer.parseInt(answer2);
+        }
 
-        if(num1 < 60 & num2 < 100) {
-            Intent intent = new Intent(this, Questionnaire_3_4.class);
+        if(num1 < 60 & num2 < 100 && num1 != -1 && num2 != -1) {
+            Intent intent = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                intent = new Intent(this, Questionnaire_3_4.class);
+            }
             startActivity(intent);
         }
         else {
