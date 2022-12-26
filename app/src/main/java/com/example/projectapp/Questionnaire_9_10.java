@@ -1,15 +1,13 @@
 package com.example.projectapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-public class Questionnaire_5_6 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Questionnaire_9_10 extends AppCompatActivity {
 
     int answer1 = 0;
     int answer2 = 0;
@@ -17,15 +15,7 @@ public class Questionnaire_5_6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questionnaire56);
-    }
-
-    public void yesButton(View view) {
-        answer2 = 1;
-    }
-
-    public void noButton(View view) {
-        answer2 = 2;
+        setContentView(R.layout.activity_questionnaire910);
     }
 
     public void btn1(View view) {
@@ -40,9 +30,21 @@ public class Questionnaire_5_6 extends AppCompatActivity {
         answer1 = 3;
     }
 
+    public void btn4(View view) {
+        answer2 = 1;
+    }
+
+    public void btn5(View view) {
+        answer2 = 2;
+    }
+
+    public void btn6(View view) {
+        answer2 = 3;
+    }
+
     public void startCheck(View view) {
         if (answer1 != 0 && answer2 != 0) {
-            Intent intent = new Intent(this, Questionnaire_7_8.class);
+            Intent intent = new Intent(this, Questionnaire_11_12.class);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

@@ -91,6 +91,7 @@ public class Photo_upload extends AppCompatActivity {
     }
 
     public void startQuestionnaire12(View view) {
+        cnt = 2;
         if(cnt == 2) {
             Intent intent = new Intent(this, Questionnaire_1_2.class);
             startActivity(intent);
