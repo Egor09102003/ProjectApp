@@ -19,6 +19,16 @@ public class Questionnaire_11_12 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire1112);
+
+        CheckBox agreement = (CheckBox) findViewById(R.id.checkBox2);
+        agreement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    flag = true;
+                }
+            }
+        });
     }
 
     public void btn1(View view) {
@@ -42,18 +52,10 @@ public class Questionnaire_11_12 extends AppCompatActivity {
     }
 
     public void startCheck(View view) {
-        CheckBox agreement = (CheckBox) findViewById(R.id.checkBox2);
-        agreement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    flag = true;
-                }
-            }
-        });
+
 
         if (answer1 != 0 && answer2 != 0 && flag) {
-            Intent intent = new Intent(this, Questionnaire_7_8.class);
+            Intent intent = new Intent(this, Results.class);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

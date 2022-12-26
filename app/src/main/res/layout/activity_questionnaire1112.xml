@@ -191,7 +191,8 @@
         android:textSize="10dp"
         android:fontFamily="@font/roboto_bold"
         android:buttonTint="@color/main_color"
-        android:textColor="@color/main_color"/>
+        android:textColor="@color/main_color"
+        />
 
     <TextView
         android:id="@+id/textViewError"
