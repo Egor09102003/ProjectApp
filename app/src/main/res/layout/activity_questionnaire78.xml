@@ -80,13 +80,14 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="80dp"
-                android:textSize="16dp"
-                android:onClick="level2"
                 android:background="@drawable/check_button"
                 android:contentDescription="right"
+                android:onClick="level2"
                 android:text="Не совпадают"
+                android:textAllCaps="false"
                 android:textColor="@drawable/click_button"
-                android:textAllCaps="false" />
+                android:textSize="16dp"
+                tools:ignore="TouchTargetSizeCheck" />
         </FrameLayout>
 
     </LinearLayout>

@@ -39,9 +39,13 @@ public class Questionnaire_3_4 extends AppCompatActivity {
 
     public void yes(View view) {
         answer = 1;
+        findViewById(R.id.button3).setBackgroundResource(R.drawable.click_button);
+        findViewById(R.id.button2).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
     public void no(View view) {
+        findViewById(R.id.button2).setBackgroundResource(R.drawable.click_button);
+        findViewById(R.id.button3).setBackgroundResource(R.drawable.warning_button_design_last);
         answer = 2;
     }
 
