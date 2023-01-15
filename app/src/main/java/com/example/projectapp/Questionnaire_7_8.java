@@ -21,10 +21,14 @@ public class Questionnaire_7_8 extends AppCompatActivity {
 
     public void level1(View view) {
         answer = 1;
+        findViewById(R.id.button6).setBackgroundResource(R.drawable.click_button);
+        findViewById(R.id.button5).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
     public void level2(View view) {
         answer = 2;
+        findViewById(R.id.button5).setBackgroundResource(R.drawable.click_button);
+        findViewById(R.id.button6).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
     public void startCheck(View view) {
