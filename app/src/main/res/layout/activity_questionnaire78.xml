@@ -42,7 +42,7 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Вопрос 3/12"
+            android:text="Вопрос 7/12"
             android:textColor="@color/main_color" />
 
         <TextView
@@ -52,34 +52,41 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Разница в возрасте (Вм - Вж)"
+            android:text="Уровень образования (среднее, бакалавр, магистр)"
             android:textColor="@color/main_color" />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_input3"
-                android:layout_width="197dp"
-                android:layout_height="55dp"
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@drawable/input_field_design">
+                android:layout_marginRight="80dp"
+                android:textSize="16dp"
+                android:onClick="level1"
+                android:background="@drawable/check_button"
+                android:contentDescription="left"
+                android:text="Совпадают"
+                android:textColor="@drawable/click_button"
+                tools:ignore="TouchTargetSizeCheck"
+                android:textAllCaps="false" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input3"
-                    android:layout_width="161dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:hint="Введите разницу(лет)"
-                    android:inputType="number"
-                    android:lines="1"
-                    android:maxLength="2"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:textSize="16dp"
+                android:onClick="level2"
+                android:background="@drawable/check_button"
+                android:contentDescription="right"
+                android:text="Не совпадают"
+                android:textColor="@drawable/click_button"
+                android:textAllCaps="false" />
         </FrameLayout>
 
     </LinearLayout>
@@ -99,7 +106,7 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Вопрос 4/12"
+            android:text="Вопрос 8/12"
             android:textColor="@color/main_color" />
 
         <TextView
@@ -109,7 +116,7 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Есть ли склонность к алкоголизму у кого-то одного?"
+            android:text="Уровень зарплаты\n($м, $ж)"
             android:textColor="@color/main_color" />
 
         <FrameLayout
@@ -117,31 +124,33 @@
             android:layout_height="match_parent">
 
 
-            <Button
-                android:id="@+id/button2"
+            <EditText
+                android:id="@+id/answer1"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="80dp"
-                android:background="@drawable/check_button"
-                android:contentDescription="left"
-                android:text="Есть"
+                android:textSize="16dp"
+                android:background="@drawable/click_button"
+                android:hint="______ Руб. (М)"
+                android:textAlignment="center"
                 android:textColor="@drawable/click_button"
-                android:onClick="yes"
                 tools:ignore="TouchTargetSizeCheck"
-                />
+                android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/button3"
+            <EditText
+                android:id="@+id/answer2"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="80dp"
-                android:background="@drawable/check_button"
-                android:contentDescription="right"
-                android:text="Нет"
-                android:onClick="no"
-                android:textColor="@drawable/click_button" />
+                android:textSize="16dp"
+                android:background="@drawable/click_button"
+                android:hint="______ Руб. (Ж)"
+                android:textAlignment="center"
+                android:textColor="@drawable/click_button"
+                tools:ignore="TouchTargetSizeCheck"
+                android:textAllCaps="false" />
         </FrameLayout>
 
     </LinearLayout>
@@ -159,12 +168,13 @@
         android:text="Далее" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/textViewError"
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="630dp"
         android:layout_height="wrap_content"
         android:textColor="@color/warning_text"
+        android:gravity="center"
         android:text="" />
 
 </RelativeLayout>

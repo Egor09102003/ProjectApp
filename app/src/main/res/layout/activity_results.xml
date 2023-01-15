@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor">
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView8,imageButton8" />
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="title_upload"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Результат анализа"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Совместимость пары:"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:text="как деловых отношений         -"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/main_color"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/busines_per"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="170dp"
+        android:paddingRight="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="__%"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="173dp"
+        android:paddingRight="48dp"
+        android:textColor="@color/main_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:text="как семейных отношений       -"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/main_color_pink"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fam_per"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="230dp"
+        android:paddingRight="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="__%"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="233dp"
+        android:paddingRight="48dp"
+        android:textColor="@color/main_color_pink"/>
+
+    <FrameLayout
+        android:layout_width="255dp"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="144dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/male_result" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Характеристика мужчины:"
+            android:paddingTop="30dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color_pink"
+            android:text="Тип личности: _______________"
+            android:paddingTop="60dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color_pink"
+            android:text="Тип характера: _______________"
+            android:paddingTop="85dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="255dp"
+        android:layout_marginTop="470dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="144dp">  
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/female_result" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Характеристика женщины:"
+            android:paddingTop="30dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color"
+            android:text="Тип личности: _______________"
+            android:paddingTop="60dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color"
+            android:text="Тип характера: _______________"
+            android:paddingTop="85dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14dp"/>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/export_button"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="80dp"/>
+
+    <Button
+        android:layout_width="53dp"
+        android:layout_height="65dp"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="660dp"
+        android:layout_marginRight="80dp"
+        android:layout_alignParentRight="true"
+        android:onClick="back"/>
+
+</RelativeLayout>
