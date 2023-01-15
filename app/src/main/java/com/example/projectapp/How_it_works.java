@@ -13,7 +13,6 @@ public class How_it_works extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_it_works);
     }
-
     public void startMain(View view) {
         Intent intent = new Intent(this, Main_page.class);
         startActivity(intent);
