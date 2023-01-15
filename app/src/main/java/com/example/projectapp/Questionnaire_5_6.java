@@ -30,9 +30,9 @@ public class Questionnaire_5_6 extends AppCompatActivity {
     }
 
     public void noButton(View view) {
+        answer2 = 2;
         findViewById(R.id.button5).setBackgroundResource(R.drawable.click_button);
         findViewById(R.id.button6).setBackgroundResource(R.drawable.warning_button_design_last);
-        answer2 = 2;
     }
 
     public void btn1(View view) {
