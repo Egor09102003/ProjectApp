@@ -42,7 +42,7 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Вопрос 9/12"
+            android:text="Вопрос 11/12"
             android:textColor="@color/main_color" />
 
         <TextView
@@ -119,7 +119,7 @@
             android:background="@drawable/question_design"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Вопрос 10/12"
+            android:text="Вопрос 12/12"
             android:textColor="@color/main_color" />
 
         <TextView
@@ -177,7 +177,7 @@
         android:layout_marginBottom="40dp"
         android:onClick="startCheck"
         android:textColor="@drawable/warning_button_design_last"
-        android:text="Запустить анализ фото"
+        android:text="Продолжить анализ"
         android:textAllCaps="false"
         android:textSize="15dp" />
 

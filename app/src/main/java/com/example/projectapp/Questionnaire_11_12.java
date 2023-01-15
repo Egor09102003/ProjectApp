@@ -68,7 +68,7 @@ public class Questionnaire_11_12 extends AppCompatActivity {
 
 
         if (answer1 != 0 && answer2 != 0 && flag) {
-            Intent intent = new Intent(this, Results.class);
+            Intent intent = new Intent(this, SMOL.class);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

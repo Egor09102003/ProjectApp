@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire_3_4">
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="title_upload"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Пожалуйста, пройдите опрос:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="327dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/question_design"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:background="@drawable/question_design"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="1. У Вас хороший аппетит."
+            android:textColor="@color/main_color"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="136dp">
+
+
+            <Button
+                android:id="@+id/byes"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="80dp"
+                android:background="@drawable/check_button"
+                android:contentDescription="left"
+                android:onClick="yes"
+                android:text="Да"
+                android:textColor="@drawable/click_button"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bno"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/check_button"
+                android:contentDescription="right"
+                android:onClick="no"
+                android:text="Нет"
+                android:textColor="@drawable/click_button" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_button_design"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:onClick="startCheck"
+        android:textColor="@drawable/warning_button_design"
+        android:text="Далее" />
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="630dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warning_text"
+        android:text="" />
+
+</RelativeLayout>
