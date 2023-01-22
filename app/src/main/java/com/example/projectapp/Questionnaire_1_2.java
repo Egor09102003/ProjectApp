@@ -4,14 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.google.android.material.textfield.TextInputLayout;
 
 public class Questionnaire_1_2 extends AppCompatActivity {
 
@@ -31,7 +26,7 @@ public class Questionnaire_1_2 extends AppCompatActivity {
             num1 = Integer.parseInt(answer1);
         }
         String answer2 = ((EditText) findViewById(R.id.input2)).getText().toString();
-        Integer num2;
+        int num2;
         if (answer2.isEmpty()) {
             num2 = -1;
         } else {
@@ -43,6 +38,7 @@ public class Questionnaire_1_2 extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
                 intent = new Intent(this, Questionnaire_3_4.class);
             }
+            System.out.println(num1);
             startActivity(intent);
         }
         else {
