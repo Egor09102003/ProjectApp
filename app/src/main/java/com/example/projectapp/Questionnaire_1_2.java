@@ -1,12 +1,19 @@
 package com.example.projectapp;
 
+import static java.lang.Integer.parseInt;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class Questionnaire_1_2 extends AppCompatActivity {
 
@@ -19,18 +26,19 @@ public class Questionnaire_1_2 extends AppCompatActivity {
 
     public void startCheck(View view) {
         String answer1 = ((EditText) findViewById(R.id.input1)).getText().toString();
-        Integer num1;
+        int num1;
         if (answer1.isEmpty()) {
             num1 = -1;
         } else {
-            num1 = Integer.parseInt(answer1);
+            num1 = parseInt(answer1, 10);
         }
+
         String answer2 = ((EditText) findViewById(R.id.input2)).getText().toString();
         int num2;
         if (answer2.isEmpty()) {
             num2 = -1;
         } else {
-            num2 = Integer.parseInt(answer2);
+            num2 = parseInt(answer2, 10);
         }
 
         if(num1 < 60 & num2 < 100 && num1 != -1 && num2 != -1) {
@@ -38,7 +46,8 @@ public class Questionnaire_1_2 extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
                 intent = new Intent(this, Questionnaire_3_4.class);
             }
-            System.out.println(num1);
+            String res = answer1 + " " + answer2;
+            intent.putExtra("q12", res);
             startActivity(intent);
         }
         else {

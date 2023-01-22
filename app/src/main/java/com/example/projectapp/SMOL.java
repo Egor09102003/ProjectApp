@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class SMOL extends AppCompatActivity {
 
     int answer = 0;
-    int i = 0;
+    int i = 69;
+    String res = null;
     String[] questions = new String[] {"1. У Вас хороший аппетит.", "2. По утрам Вы обычно чувствуете" +
             ", что выспались и отдохнули." , "3. В Вашей повседневной жизни масса интересного."
             , "4. Вы работаете с большим напряжением."
@@ -72,12 +73,15 @@ public class SMOL extends AppCompatActivity {
             , "68. Вы чувствуете острее, чем большинство других людей."
             , "69. Временами Ваша голова работает как бы медленнее, чем обычно."
             , "70. Вы часто разочаровываетесь в людях. ", "71. Вы злоупотребляли спиртными напитками."};
-    Boolean[] answers = new Boolean[71];
+    String answers = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_smol);
+
+        String q = getIntent().getStringExtra("q1112");
+        res = q;
     }
 
     public void yes(View view) {
@@ -94,7 +98,13 @@ public class SMOL extends AppCompatActivity {
 
     public void startCheck(View view) {
         if (i == 70) {
-            Intent intent = new Intent(this, Results.class);
+            Intent intent = new Intent(this, MBTI.class);
+            if (answer == 1)
+                answers += "1";
+            else
+                answers += "0";
+            intent.putExtra("q", res);
+            intent.putExtra("smol", answers);
             startActivity(intent);
         }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);
@@ -102,7 +112,10 @@ public class SMOL extends AppCompatActivity {
             textWarning.setText("Вы не выбрали ответ");
         } else {
             textWarning.setText("");
-            answers[i] = answer == 1;
+            if (answer == 1)
+                answers += "1";
+            else
+                answers += "0";
             i++;
             answer = 0;
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);

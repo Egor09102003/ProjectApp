@@ -14,11 +14,15 @@ public class Questionnaire_11_12 extends AppCompatActivity {
     int answer1 = 0;
     int answer2 = 0;
     boolean flag = false;
+    String res = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire1112);
+
+        String q910 = getIntent().getStringExtra("q910");
+        res = q910;
 
         CheckBox agreement = (CheckBox) findViewById(R.id.checkBox2);
         agreement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -69,6 +73,19 @@ public class Questionnaire_11_12 extends AppCompatActivity {
 
         if (answer1 != 0 && answer2 != 0 && flag) {
             Intent intent = new Intent(this, SMOL.class);
+            if (answer1 == 1)
+                res += " always";
+            else{
+                if (answer1 == 2)
+                    res += " sometimes";
+                else
+                    res += " never";
+            }
+            if (answer2 == 1)
+                res += " yes";
+            else
+                res += " no";
+            intent.putExtra("q1112", res);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

@@ -11,11 +11,15 @@ public class Questionnaire_9_10 extends AppCompatActivity {
 
     int answer1 = 0;
     int answer2 = 0;
+    String res = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire910);
+
+        String q78 = getIntent().getStringExtra("q78");
+        res = q78;
     }
 
     public void btn1(View view) {
@@ -63,6 +67,23 @@ public class Questionnaire_9_10 extends AppCompatActivity {
     public void startCheck(View view) {
         if (answer1 != 0 && answer2 != 0) {
             Intent intent = new Intent(this, Questionnaire_11_12.class);
+            if (answer1 == 1)
+                res += " own";
+            else{
+                if (answer1 == 2)
+                    res += " not_own";
+                else
+                    res += " mortgage";
+            }
+            if (answer2 == 1)
+                res += " always";
+            else{
+                if (answer2 == 2)
+                    res += " sometimes";
+                else
+                    res += " never";
+            }
+            intent.putExtra("q910", res);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

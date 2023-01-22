@@ -24,13 +24,16 @@ public class Questionnaire_3_4 extends AppCompatActivity {
   //  Resources resources = getResources();
    // int backgroundColor = resources.getColor(R.color.white,  null);
    // int textColor = resources.getColor(R.color.main_color,  null);
-
+    String res = null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire34);
+
+        String q12 = getIntent().getStringExtra("q12");
+        res = q12;
     }
 
     public void yes(View view) {
@@ -56,6 +59,12 @@ public class Questionnaire_3_4 extends AppCompatActivity {
         System.out.println(answer);
         if (num < 50 && answer != 0 && num != -1) {
             Intent intent = new Intent(this, Questionnaire_5_6.class);
+            res += " " + answer3;
+            if (answer == 1)
+                res += " yes";
+            else
+                res += " no";
+            intent.putExtra("q34", res);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textView16);

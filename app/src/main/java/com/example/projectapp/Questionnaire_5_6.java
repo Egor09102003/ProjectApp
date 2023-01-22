@@ -16,11 +16,15 @@ public class Questionnaire_5_6 extends AppCompatActivity {
 
     int answer1 = 0;
     int answer2 = 0;
+    String res = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire56);
+
+        String q34 = getIntent().getStringExtra("q34");
+        res = q34;
     }
 
     public void yesButton(View view) {
@@ -59,6 +63,19 @@ public class Questionnaire_5_6 extends AppCompatActivity {
     public void startCheck(View view) {
         if (answer1 != 0 && answer2 != 0) {
             Intent intent = new Intent(this, Questionnaire_7_8.class);
+            if (answer2 == 1)
+                res += " yes";
+            else
+                res += " no";
+            if (answer1 == 1)
+                res += " match";
+            else{
+                if (answer1 == 2)
+                    res += " medium";
+                else
+                    res += " no_match";
+            }
+            intent.putExtra("q56", res);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);
