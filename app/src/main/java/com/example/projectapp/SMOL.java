@@ -2,6 +2,7 @@ package com.example.projectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -92,12 +93,16 @@ public class SMOL extends AppCompatActivity {
     }
 
     public void startCheck(View view) {
+        if (i == 70) {
+            Intent intent = new Intent(this, Results.class);
+            startActivity(intent);
+        }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);
         if (answer == 0) {
             textWarning.setText("Вы не выбрали ответ");
         } else {
             textWarning.setText("");
-            answers[i] = (answer == 1) ? true : false;
+            answers[i] = answer == 1;
             i++;
             answer = 0;
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);

@@ -33,10 +33,6 @@ public class Questionnaire_3_4 extends AppCompatActivity {
         setContentView(R.layout.activity_questionnaire34);
     }
 
-    //  public void startYes(View view) {
-  //
-  //  }
-
     public void yes(View view) {
         answer = 1;
         findViewById(R.id.button3).setBackgroundResource(R.drawable.click_button);
@@ -51,7 +47,7 @@ public class Questionnaire_3_4 extends AppCompatActivity {
 
     public void startCheck(View view) {
         String answer3 = ((EditText) findViewById(R.id.input3)).getText().toString();
-        Integer num;
+        int num;
         if (answer3.isEmpty()) {
             num = -1;
         } else {
