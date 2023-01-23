@@ -12,10 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/main_color"
-        android:textSize="15dp"
+        android:textSize="10dp"
         android:padding="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:fontFamily="@font/roboto_bold"
         android:text="Общеизвестно, что не менее 70% всех семейных пар распадается. Данный сайт представляет собой результат исследования совместимости семейных пар с большим стажем. С помощью тестов и нейросети определяется типология личности и характера как мужчины, так и женщины. Для формирования наиболее устойчивых отношений наиболее важно соответствие партнеров по типу характера. Из 8 типов характера (MMPI, CMOL) подходит, как правило, только 1-2. Имеет большое значение типология личности с точки зрения взаимного дополнения, перекрывания недостатков одного партнера возможностями другого.
 
@@ -23,22 +22,16 @@
 
 Результат выдается в формате ожидаемой продолжительности совместной жизни с учетом всех факторов. Наилучшим решением представляется результат свыше 25 лет ожидаемой совместной жизни. Критически значимым является анализ фотографий. Поэтому необходимы фото без экспрессии, не удаленные, без шляпы, очков, не под углом и т.п. Точность диагностики будет постепенно нарастать в процессе работы сайта." />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/img" />
     <Button
         android:id="@+id/button_instruction_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/warning_button_design"
-        android:layout_centerHorizontal="true"
+        android:layout_width="173dp"
+        android:layout_height="33dp"
+        android:textSize="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/warning_button_design"
         android:onClick="startMain"
-        android:textColor="@drawable/warning_button_design"
-        android:text="   Вернуться на главную   " />
+        android:text="   Вернуться на главную   "
+        android:textColor="@drawable/warning_button_design" />
 </RelativeLayout>

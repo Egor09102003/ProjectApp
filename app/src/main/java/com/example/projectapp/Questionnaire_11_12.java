@@ -72,7 +72,7 @@ public class Questionnaire_11_12 extends AppCompatActivity {
 
 
         if (answer1 != 0 && answer2 != 0 && flag) {
-            Intent intent = new Intent(this, Question1.class);
+            Intent intent = new Intent(this, SMOL.class);
             if (answer1 == 1)
                 res += " always";
             else{

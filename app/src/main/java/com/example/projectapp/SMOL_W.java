@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class SMOL extends AppCompatActivity {
+public class SMOL_W extends AppCompatActivity {
 
     int answer = 0;
     int i = 69;
@@ -78,9 +78,9 @@ public class SMOL extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_smol);
+        setContentView(R.layout.activity_smol_w);
 
-        String q = getIntent().getStringExtra("q1112");
+        String q = getIntent().getStringExtra("smol");
         res = q;
     }
 
@@ -98,13 +98,13 @@ public class SMOL extends AppCompatActivity {
 
     public void startCheck(View view) {
         if (i == 70) {
-            Intent intent = new Intent(this, SMOL_W.class);
+            Intent intent = new Intent(this, MBTI.class);
             if (answer == 1)
                 answers += "1";
             else
                 answers += "0";
             res += " " + answers;
-            intent.putExtra("smol", res);
+            intent.putExtra("smol_w", res);
             startActivity(intent);
         }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);

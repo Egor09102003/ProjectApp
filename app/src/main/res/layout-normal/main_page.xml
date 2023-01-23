@@ -16,13 +16,13 @@
     <FrameLayout
         android:id="@+id/layout_header_title"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="110dp"
         android:background="@color/main_color">
 
         <TextView
             android:id="@+id/header_title"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="110dp"
             android:gravity="center"
             android:layout_marginLeft="11dp"
             android:layout_marginRight="11dp"
@@ -36,25 +36,26 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/main_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="300dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="230dp"
+        android:layout_centerVertical="true">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="206dp"
-            android:layout_height="182dp"
+            android:layout_width="175dp"
+            android:layout_height="152dp"
             android:background="@color/white"
             android:contentDescription="button2"
-            app:layout_column="2"
             android:onClick="startDo"
+            app:layout_column="2"
             app:layout_row="0"
             app:srcCompat="@drawable/button2_main" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="203dp"
-            android:layout_height="182dp"
+            android:layout_width="175dp"
+            android:layout_height="152dp"
             android:background="@color/white"
             android:contentDescription="button1"
             android:onClick="startUpload"
@@ -64,7 +65,7 @@
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="205dp"
+            android:layout_width="175dp"
             android:layout_height="174dp"
             android:background="@color/white"
             android:contentDescription="button3"
@@ -75,7 +76,7 @@
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="205dp"
+            android:layout_width="175dp"
             android:layout_height="173dp"
             android:background="@color/white"
             android:contentDescription="button4"
@@ -110,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="title"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="190dp"
         android:fontFamily="@font/roboto_bold"
         android:textSize="27sp"
         android:text="Выберите опцию:"

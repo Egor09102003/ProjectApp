@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor"
+    tools:context=".Feedback">
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/title_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Обратная связь:" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="57dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="110dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/icon_feedback" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="293dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="buttons_feedback"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/roboto_bold"
+            android:text="Вы можете связаться с нами:"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+
+            android:background="@color/white"
+            android:contentDescription="button_watsapp"
+            app:srcCompat="@drawable/feedback_watsapp" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:onClick="startTelegram"
+            android:contentDescription="button_telegram"
+            app:srcCompat="@drawable/feedback_telegram" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:onClick="startVK"
+            android:contentDescription="button_vk"
+            app:srcCompat="@drawable/feedback_vk" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_instruction_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_button_design"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:onClick="startMain"
+        android:textColor="@drawable/warning_button_design"
+        android:text="   Вернуться на главную   " />
+
+
+</RelativeLayout>

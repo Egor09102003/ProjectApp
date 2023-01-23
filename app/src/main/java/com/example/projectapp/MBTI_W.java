@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MBTI extends AppCompatActivity {
+public class MBTI_W extends AppCompatActivity {
 
     int answer = 0;
     int i = 0;
@@ -75,9 +75,9 @@ public class MBTI extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mbti);
+        setContentView(R.layout.activity_mbti_w);
 
-        String q = getIntent().getStringExtra("smol_w");
+        String q = getIntent().getStringExtra("mbti");
         res = q;
     }
 
@@ -95,13 +95,13 @@ public class MBTI extends AppCompatActivity {
 
     public void startCheck(View view) {
         if (i == 27) {
-            Intent intent = new Intent(this, MBTI_W.class);
+            Intent intent = new Intent(this, Results.class);
             if (answer == 1)
                 answers += "1";
             else
                 answers += "0";
             res += " " + answers;
-            intent.putExtra("mbti", res);
+            intent.putExtra("mbti_w", res);
             startActivity(intent);
         }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);

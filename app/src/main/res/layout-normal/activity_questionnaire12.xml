@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Questionnaire_1_2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="327dp"
+            android:layout_height="189dp"
+            android:background="@drawable/question_design"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Вопрос 1/12"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Разница в росте (Рм - Рж)"
+                android:textColor="@color/main_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_input1"
+                    android:layout_width="197dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/input_field_design">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input1"
+                        android:layout_width="161dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="Введите разницу(см)"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="327dp"
+            android:layout_height="189dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/question_design"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Вопрос 2/12"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Разница в весе (Вм - Вж)"
+                android:textColor="@color/main_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_input2"
+                    android:layout_width="197dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/input_field_design">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input2"
+                        android:layout_width="161dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="Введите разницу(кг)"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="3"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="title_upload"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Пожалуйста, пройдите опрос:"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_instruction_back"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_button_design"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="startCheck"
+        android:textColor="@drawable/warning_button_design"
+        android:text="Далее" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="630dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warning_text"
+        android:text="" />
+
+</RelativeLayout>

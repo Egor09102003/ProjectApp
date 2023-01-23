@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".MBTI">
+    tools:context=".MBTI_W">
 
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
@@ -17,12 +17,12 @@
             android:id="@+id/text_upload"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="title_upload"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:contentDescription="title_upload"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Пожалуйста, пройдите опрос(для мужчины):"
+            android:text="Пожалуйста, пройдите опрос(для женщины):"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="17sp" />
