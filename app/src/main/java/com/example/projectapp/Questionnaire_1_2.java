@@ -12,6 +12,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -24,7 +31,7 @@ public class Questionnaire_1_2 extends AppCompatActivity {
         setContentView(R.layout.activity_questionnaire12);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException, IOException {
         String answer1 = ((EditText) findViewById(R.id.input1)).getText().toString();
         int num1;
         if (answer1.isEmpty()) {
@@ -46,8 +53,12 @@ public class Questionnaire_1_2 extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
                 intent = new Intent(this, Questionnaire_3_4.class);
             }
-            String res = answer1 + " " + answer2;
-            intent.putExtra("q12", res);
+            String path = "data.json";
+            JSONObject json = new JSONObject();
+            json.put("height_difference", num1);
+            json.put("weight_difference", num2);
+            System.out.println(json);
+            intent.putExtra("q12", json.toString());
             startActivity(intent);
         }
         else {

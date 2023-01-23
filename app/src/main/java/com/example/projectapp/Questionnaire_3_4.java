@@ -5,6 +5,9 @@ import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -48,7 +51,7 @@ public class Questionnaire_3_4 extends AppCompatActivity {
         answer = 2;
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         String answer3 = ((EditText) findViewById(R.id.input3)).getText().toString();
         int num;
         if (answer3.isEmpty()) {
@@ -58,13 +61,15 @@ public class Questionnaire_3_4 extends AppCompatActivity {
         }
         System.out.println(answer);
         if (num < 50 && answer != 0 && num != -1) {
+            JSONObject json = new JSONObject(res);
+            json.put("age_difference", num);
             Intent intent = new Intent(this, Questionnaire_5_6.class);
-            res += " " + answer3;
             if (answer == 1)
-                res += " yes";
+                json.put("alcoholism", "yes");
             else
-                res += " no";
-            intent.putExtra("q34", res);
+                json.put("alcoholism", "no");
+            System.out.println(json);
+            intent.putExtra("q34", json.toString());
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textView16);

@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Questionnaire_5_6 extends AppCompatActivity {
 
@@ -60,22 +62,24 @@ public class Questionnaire_5_6 extends AppCompatActivity {
         findViewById(R.id.button8).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         if (answer1 != 0 && answer2 != 0) {
             Intent intent = new Intent(this, Questionnaire_7_8.class);
+            JSONObject json = new JSONObject(res);
             if (answer2 == 1)
-                res += " yes";
+                json.put("political_views_difference", "yes");
             else
-                res += " no";
+                json.put("political_views_difference", "no");
             if (answer1 == 1)
-                res += " match";
+                json.put("leisure_preferences_coincide", "Совпадают");
             else{
                 if (answer1 == 2)
-                    res += " medium";
+                    json.put("leisure_preferences_coincide", "50/50");
                 else
-                    res += " no_match";
+                    json.put("leisure_preferences_coincide", "Не совпадают");
             }
-            intent.putExtra("q56", res);
+            System.out.println(json.toString());
+            intent.putExtra("q56", json.toString());
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

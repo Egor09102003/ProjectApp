@@ -8,17 +8,24 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Questionnaire_12_W extends AppCompatActivity {
 
     int[] marks = new int[23];
     String answers = "[";
     int flag = 0;
+    String res = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire12_w);
+
+        String q12m = getIntent().getStringExtra("q12m");
+        res = q12m;
 
         CheckBox agreement1 = (CheckBox) findViewById(R.id.checkBox1);
         agreement1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -333,15 +340,22 @@ public class Questionnaire_12_W extends AppCompatActivity {
         });
     }
 
-    public void startCheck(View view) {
-
+    public void startCheck(View view) throws JSONException {
+        JSONArray answers = new JSONArray();
         int cnt = 0;
-        for (int i = 0; i < 23; i ++)
+        for (int i = 0; i < 23; i ++) {
             cnt += marks[i];
+            if (marks[i] != 0)
+                answers.put(i);
+        }
         if (cnt == 3 || cnt == 4 || cnt == 5) {
             if (flag == 1) {
                 Intent intent = new Intent(this, MBTI.class);
-                //intent.putExtra("q1112", res);
+                JSONObject json = new JSONObject(res);
+                json.put("economy_sector_female", answers);
+                json.put("processing_personal_data", true);
+                System.out.println(json);
+                intent.putExtra("q12w", json.toString());
                 startActivity(intent);
             }
             else{

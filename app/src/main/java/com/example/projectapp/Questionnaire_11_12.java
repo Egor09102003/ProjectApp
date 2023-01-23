@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Questionnaire_11_12 extends AppCompatActivity {
 
@@ -19,8 +21,8 @@ public class Questionnaire_11_12 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire1112);
 
-        //String q910 = getIntent().getStringExtra("q910");
-        //res = q910;
+        String q910 = getIntent().getStringExtra("q910");
+        res = q910;
     }
 
     public void btn1(View view) {
@@ -44,14 +46,25 @@ public class Questionnaire_11_12 extends AppCompatActivity {
         findViewById(R.id.sometimes).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         if (answer1 != 0) {
+            JSONObject json = new JSONObject(res);
+            if (answer1 == 1)
+                json.put("exchange_ideas", "Всегда");
+            else if (answer1 == 2)
+                json.put("exchange_ideas", "Нет");
+            else
+                json.put("exchange_ideas", "Иногда");
             Intent intent = new Intent(this, Questionnaire_12_M.class);
+            System.out.println(json);
+            intent.putExtra("q11", json.toString());
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);
             textWarning.setText("Вы не выбрали ответ");
         }
+
+
     }
 
 }

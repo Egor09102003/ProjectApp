@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MBTI_W extends AppCompatActivity {
 
@@ -128,7 +133,7 @@ public class MBTI_W extends AppCompatActivity {
             "Доброжелательный",
             "",
             ""};
-    String answers = "";
+    ArrayList<Integer> answers = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,15 +156,67 @@ public class MBTI_W extends AppCompatActivity {
         findViewById(R.id.bno).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         if (i == 55) {
-            Intent intent = new Intent(this, Results.class);
+            Intent intent = new Intent(this, SMOL.class);
             if (answer == 1)
-                answers += "1";
+                answers.add(1);
             else
-                answers += "0";
-            res += " " + answers;
-            intent.putExtra("mbti_w", res);
+                answers.add(2);
+            JSONObject big_json = new JSONObject(res);
+            JSONObject cur_json = new JSONObject();
+            JSONArray json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("first_organizing", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("first_communicability", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("first_practicality", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("first_logicality", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("second_organizing", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("second_communicability", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("second_practicality", json_answers);
+            json_answers = new JSONArray();
+            for (int k = 0; k < 7; k++) {
+                json_answers.put(answers.get(0));
+                answers.remove(0);
+            }
+            cur_json.put("second_logicality", json_answers);
+
+            big_json.put("mbti_quiz_female", cur_json);
+            System.out.println(big_json);
+            intent.putExtra("mbtiw", big_json.toString());
             startActivity(intent);
         }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);
@@ -168,9 +225,9 @@ public class MBTI_W extends AppCompatActivity {
         } else {
             textWarning.setText("");
             if (answer == 1)
-                answers += "1";
+                answers.add(1);
             else
-                answers += "0";
+                answers.add(2);
             i++;
             answer = 0;
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
