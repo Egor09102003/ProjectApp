@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire_7_8">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="327dp"
+            android:layout_height="189dp"
+            android:background="@drawable/question_design"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Вопрос 7/12"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Уровень образования (среднее, бакалавр, магистр)"
+                android:textColor="@color/main_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/check_button"
+                    android:contentDescription="left"
+                    android:onClick="level1"
+                    android:text="Совпадают"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/click_button"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/check_button"
+                    android:contentDescription="right"
+                    android:onClick="level2"
+                    android:text="Не совпадают"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/click_button"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="327dp"
+            android:layout_height="189dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/question_design"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Вопрос 8/12"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@drawable/question_design"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Уровень зарплаты\n($м, $ж)"
+                android:textColor="@color/main_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/answer1"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/click_button"
+                    android:hint="______ Руб. (М)"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/click_button"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/answer2"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/click_button"
+                    android:hint="______ Руб. (Ж)"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/click_button"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="title_upload"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Пожалуйста, пройдите опрос:"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_instruction_back"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_button_design"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="startCheck"
+        android:textColor="@drawable/warning_button_design"
+        android:text="Далее" />
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="630dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warning_text"
+        android:gravity="center"
+        android:text="" />
+
+</RelativeLayout>

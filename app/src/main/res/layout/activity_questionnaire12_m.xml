@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire_12_M">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp">
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Власть, социальная сфера, общество, политика, экология"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Энергетика (электро, тепло, новые источники)"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Нефть и газ, горное дело, геология"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Банки, финансы, ценные бумаги, биржа"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Медицина, фармацевтика, здоровье"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Химическая технология, металлургия"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Новые материалы, композиты, наноматериалы"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Космос, авиа, транспорт, авто, связь, телекоммуникация"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Машиностроение, приборостроение, электроника, механика"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Строительство, недвижимость, проектирование, гидрология"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Физика, астрономия и математика"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Образование, профориентация, философия, история, обучение в школе"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="ИТ, интернет, программист-разработчик"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Инженер-конструктор ДНК, биология, биотехнология"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Персонал, психология, социология"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Связи с общественностью, реклама, бренд, торговля, пиар, коммуникация"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Спорт, отдых, туризм"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Сервис, питание, организация торжеств, ивент-менеджмент, маникюр"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Журналист, передача на ТВ, реклама, полиграфия, лингвистика"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Архитектура, дизайн, художники, эстетика, проектирование"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Искусство, артист, автор сценария, музыкант, режиссер, культура, писатель"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Безопасность, налоги, страхование, юриспруденция, адвокат, МЧС"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/main_color"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Сельхоз-во, лесное хоз-во, животноводство"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textViewError"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/warning_text"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button_instruction_back"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/warning_button_design"
+                android:layout_gravity="center"
+                android:layout_marginBottom="100dp"
+                android:onClick="startCheck"
+                android:textColor="@drawable/warning_button_design"
+                android:text="Далее" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/layout_header_title_upload"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/text_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:contentDescription="title_upload"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Приоритетная отрасль для экономики мужчины (3-5 элементов)"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>
