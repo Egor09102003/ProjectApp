@@ -27,7 +27,7 @@ public class Results extends AppCompatActivity {
         System.out.println(smol);
         System.out.println(mbti);
     }
-    public void back(View view) {
+    public void startMain(View view) {
         Intent intent = new Intent(this, Main_page.class);
         startActivity(intent);
     }
