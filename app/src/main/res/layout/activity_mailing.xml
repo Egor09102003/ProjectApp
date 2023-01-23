@@ -7,27 +7,57 @@
     android:background="@color/white"
     tools:context=".Mailing">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_centerVertical="true"
-        android:layout_marginTop="90dp"
-        android:layout_marginBottom="50dp"
-        android:fontFamily="@font/roboto_bold"
-        android:padding="20dp"
-        android:text="Благодарим за прохождение наших опросов!
-Хотели бы Вы получить результаты анализа на почту?"
-        android:textAlignment="center"
-        android:textColor="@color/main_color"
-        android:textSize="13sp" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="127dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        app:srcCompat="@drawable/img" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="20dp"
+            android:text="Благодарим за прохождение наших опросов!
+    Хотели бы Вы получить результаты анализа на почту? Введите почту ниже или оставьте поле пустым."
+            android:textAlignment="center"
+            android:textColor="@color/main_color"
+            android:textSize="17sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_input1"
+            android:layout_width="227dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:background="@drawable/input_field_design">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input1"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Введите адрес здесь"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warning_text"
+            android:text="" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button_instruction_back"
@@ -36,8 +66,9 @@
         android:background="@drawable/warning_button_design"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="35dp"
         android:onClick="startMain"
         android:textColor="@drawable/warning_button_design"
-        android:text="   Вернуться на главную   " />
+        android:text="   Получить результаты   " />
+
 </RelativeLayout>
