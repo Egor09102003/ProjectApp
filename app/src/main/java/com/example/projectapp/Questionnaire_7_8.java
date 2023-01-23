@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Questionnaire_7_8 extends AppCompatActivity {
 
@@ -35,7 +37,7 @@ public class Questionnaire_7_8 extends AppCompatActivity {
         findViewById(R.id.button6).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         String answer1 = ((EditText) findViewById(R.id.answer1)).getText().toString();
         Integer num1 = -1;
         if (!answer1.isEmpty()) {
@@ -48,13 +50,15 @@ public class Questionnaire_7_8 extends AppCompatActivity {
         }
         if (answer != 0 && num1 != -1 && num2 != -1) {
             Intent intent = new Intent(this, Questionnaire_9_10.class);
+            JSONObject json = new JSONObject(res);
+            json.put("salary_male", num1);
+            json.put("salary_female", num2);
             if (answer == 1)
-                res += " match";
+                json.put("education_level", "Совпадают");
             else
-                res += " no_match";
-            res += " " + answer1 + " " + answer2;
-            intent.putExtra("q78", res);
-            System.out.println(res);
+                json.put("education_level", "Не совпадают");
+            intent.putExtra("q78", json.toString());
+            System.out.println(json);
             startActivity(intent);
         } else {
             TextView textWarning = (TextView) findViewById(R.id.textViewError);

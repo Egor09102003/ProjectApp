@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class SMOL_W extends AppCompatActivity {
 
     int answer = 0;
-    int i = 69;
+    int i = 0;
     String res = null;
     String[] questions = new String[] {"1. У Вас хороший аппетит.", "2. По утрам Вы обычно чувствуете" +
             ", что выспались и отдохнули." , "3. В Вашей повседневной жизни масса интересного."
@@ -73,7 +77,7 @@ public class SMOL_W extends AppCompatActivity {
             , "68. Вы чувствуете острее, чем большинство других людей."
             , "69. Временами Ваша голова работает как бы медленнее, чем обычно."
             , "70. Вы часто разочаровываетесь в людях. ", "71. Вы злоупотребляли спиртными напитками."};
-    String answers = "";
+    JSONArray json_answers = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,15 +100,19 @@ public class SMOL_W extends AppCompatActivity {
         findViewById(R.id.bno).setBackgroundResource(R.drawable.warning_button_design_last);
     }
 
-    public void startCheck(View view) {
+    public void startCheck(View view) throws JSONException {
         if (i == 70) {
-            Intent intent = new Intent(this, MBTI.class);
+            Intent intent = new Intent(this, Results.class);
             if (answer == 1)
-                answers += "1";
+                json_answers.put(true);
             else
-                answers += "0";
-            res += " " + answers;
-            intent.putExtra("smol_w", res);
+                json_answers.put(false);
+            JSONObject big_json = new JSONObject(res);
+            JSONObject small_json = new JSONObject();
+            small_json.put("quiz", json_answers);
+            big_json.put("smol_quiz_female", small_json);
+            System.out.println(big_json);
+            intent.putExtra("smol", big_json.toString());
             startActivity(intent);
         }
         TextView textWarning = (TextView) findViewById(R.id.textViewError);
@@ -113,9 +121,9 @@ public class SMOL_W extends AppCompatActivity {
         } else {
             textWarning.setText("");
             if (answer == 1)
-                answers += "1";
+                json_answers.put(true);
             else
-                answers += "0";
+                json_answers.put(false);
             i++;
             answer = 0;
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
