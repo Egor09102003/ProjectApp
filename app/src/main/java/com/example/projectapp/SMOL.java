@@ -130,7 +130,8 @@ public class SMOL extends AppCompatActivity {
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
             findViewById(R.id.bno).setBackgroundResource(R.drawable.click_button);
             TextView textView = findViewById(R.id.question);
-            textView.setText(questions[i]);
+            if (i < 71)
+                textView.setText(questions[i]);
         }
     }
 }

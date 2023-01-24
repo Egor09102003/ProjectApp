@@ -1,6 +1,12 @@
 package com.example.projectapp;
 
+import static android.util.Base64.DEFAULT;
+import static android.util.Base64.encodeToString;
+import static java.util.Base64.*;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
@@ -9,6 +15,7 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,9 +32,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
+import java.io.ByteArrayOutputStream;
 
 public class Photo_upload extends AppCompatActivity {
 
@@ -40,8 +53,8 @@ public class Photo_upload extends AppCompatActivity {
     int flag = 0;
     int cnt = 0;
     int PICK_IMAGE_MULTIPLE = 1;
-    String imageEncoded;
     List<String> imagesEncodedList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +103,7 @@ public class Photo_upload extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startQuestionnaire12(View view) {
+    public void startQuestionnaire12(View view) throws JSONException {
         if(cnt == 2) {
             Intent intent = new Intent(this, Questionnaire_1_2.class);
             startActivity(intent);
@@ -120,28 +133,51 @@ public class Photo_upload extends AppCompatActivity {
                                 final InputStream imageStream1 = getContentResolver().openInputStream(imageUri1);
                                 final Bitmap selectedImage1 = BitmapFactory.decodeStream(imageStream1);
                                 view.setImageBitmap(selectedImage1);
+//                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                                selectedImage1.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img1m = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().male.add(img1m);
                                 final InputStream imageStream2 = getContentResolver().openInputStream(imageUri2);
                                 final Bitmap selectedImage2 = BitmapFactory.decodeStream(imageStream2);
                                 view2.setImageBitmap(selectedImage2);
+//                                baos = new ByteArrayOutputStream();
+//                                selectedImage2.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img2m = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().male.add(img2m);
                                 final InputStream imageStream3 = getContentResolver().openInputStream(imageUri3);
                                 final Bitmap selectedImage3 = BitmapFactory.decodeStream(imageStream3);
                                 view3.setImageBitmap(selectedImage3);
+//                                baos = new ByteArrayOutputStream();
+//                                selectedImage3.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img3m = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().male.add(img1m);
                             }
                             else{
                                 final InputStream imageStream1 = getContentResolver().openInputStream(imageUri1);
                                 final Bitmap selectedImage1 = BitmapFactory.decodeStream(imageStream1);
                                 view4.setImageBitmap(selectedImage1);
+                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                selectedImage1.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                String img1w = encodeToString(baos.toByteArray(), DEFAULT);
+                                Single.getInstance().female.add(img1w);
                                 final InputStream imageStream2 = getContentResolver().openInputStream(imageUri2);
                                 final Bitmap selectedImage2 = BitmapFactory.decodeStream(imageStream2);
                                 view5.setImageBitmap(selectedImage2);
+                                baos = new ByteArrayOutputStream();
+                                selectedImage2.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                String img2w = encodeToString(baos.toByteArray(), DEFAULT);
+                                Single.getInstance().female.add(img2w);
                                 final InputStream imageStream3 = getContentResolver().openInputStream(imageUri3);
                                 final Bitmap selectedImage3 = BitmapFactory.decodeStream(imageStream3);
                                 view6.setImageBitmap(selectedImage3);
+                                baos = new ByteArrayOutputStream();
+                                selectedImage3.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                String img3w = encodeToString(baos.toByteArray(), DEFAULT);
+                                Single.getInstance().female.add(img3w);
                             }
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
-                        //do something with the image (save it to some directory or whatever you need to do with it here)
                     }
                     else{
                         TextView textWarning = (TextView) findViewById(R.id.textView12);
