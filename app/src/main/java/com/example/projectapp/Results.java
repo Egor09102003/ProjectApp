@@ -106,12 +106,14 @@ public class Results extends AppCompatActivity {
                     HttpResponse response = httpclient.execute(httpget);
                     String responseString = new BasicResponseHandler().handleResponse(response);
                     data = responseString;
+                    System.out.println(data);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
 
                 runOnUiThread(new Runnable() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void run() {
                         JSONObject json_data = null;
@@ -120,15 +122,19 @@ public class Results extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        TextView man = findViewById(R.id.textView_m);
-                        TextView woman = findViewById(R.id.textView_w);
+                        TextView man_pers = findViewById(R.id.textView_m);
+                        TextView woman_pers = findViewById(R.id.textView_w);
+                        TextView man_char = findViewById(R.id.textView_m2);
+                        TextView woman_char = findViewById(R.id.textView_w2);
                         TextView compatibility = findViewById(R.id.textView14);
                         TextView business = findViewById(R.id.textView13);
                         try {
                             compatibility.setText((CharSequence) json_data.get("years_compatibility_str"));
                             business.setText((CharSequence) json_data.get("years_business_str"));
-                            man.setText("Тип личности:\n"+(CharSequence) json_data.get("male_personality_desc")+"\nТип характера:\n"+(CharSequence) json_data.get("male_character_type")+"\n"+(CharSequence) json_data.get("male_character_desc"));
-                            woman.setText("Тип личности:\n"+(CharSequence) json_data.get("female_personality_desc")+"\nТип характера:\n"+(CharSequence) json_data.get("female_character_type")+"\n"+(CharSequence) json_data.get("female_character_desc"));
+                            man_pers.setText("Тип личности: " + (CharSequence) json_data.get("male_personality_type") + "\n" + (CharSequence) json_data.get("male_personality_desc"));
+                            woman_pers.setText("Тип личности: " + (CharSequence) json_data.get("female_personality_type") + "\n" + (CharSequence) json_data.get("female_personality_desc"));
+                            man_char.setText("Тип характера: " + (CharSequence) json_data.get("male_character_type") + "\n" + (CharSequence) json_data.get("male_character_desc"));
+                            woman_char.setText("Тип характера: " + (CharSequence) json_data.get("female_character_type") + "\n" + (CharSequence) json_data.get("female_character_desc"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

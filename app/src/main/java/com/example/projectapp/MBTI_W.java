@@ -232,10 +232,12 @@ public class MBTI_W extends AppCompatActivity {
             answer = 0;
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
             Button b1 = (Button) findViewById(R.id.byes);
-            b1.setText(questions[i * 2]);
-            findViewById(R.id.bno).setBackgroundResource(R.drawable.click_button);
-            Button b2 = (Button) findViewById(R.id.bno);
-            b2.setText(questions[i * 2 + 1]);
+            if (i < 55) {
+                b1.setText(questions[i * 2]);
+                findViewById(R.id.bno).setBackgroundResource(R.drawable.click_button);
+                Button b2 = (Button) findViewById(R.id.bno);
+                b2.setText(questions[i * 2 + 1]);
+            }
         }
     }
 }
