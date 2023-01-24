@@ -38,7 +38,7 @@
                 android:background="@drawable/output_m_design"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
-                android:text="20%"
+                android:text="0 лет"
                 android:textColor="@color/main_color" />
         </LinearLayout>
 
@@ -66,7 +66,7 @@
                 android:background="@drawable/output_w_design"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
-                android:text="20%"
+                android:text="0 лет"
                 android:textColor="@color/main_color_pink" />
         </LinearLayout>
 
@@ -84,7 +84,7 @@
                 android:gravity="center"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="TextView"
+                android:text="Характеристика мужчины"
                 android:textColor="@color/main_color_pink"
                 android:textSize="12sp"
                 android:background="@drawable/male_result"/>
@@ -106,7 +106,7 @@
                 android:paddingRight="5dp"
                 android:layout_height="match_parent"
                 android:textColor="@color/main_color"
-                android:text="TextView"
+                android:text="Характеристика женщины"
                 android:background="@drawable/female_result"/>
 
         </FrameLayout>

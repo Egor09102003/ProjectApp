@@ -156,24 +156,24 @@ public class Photo_upload extends AppCompatActivity {
                                 final InputStream imageStream1 = getContentResolver().openInputStream(imageUri1);
                                 final Bitmap selectedImage1 = BitmapFactory.decodeStream(imageStream1);
                                 view4.setImageBitmap(selectedImage1);
-                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                                selectedImage1.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                                String img1w = encodeToString(baos.toByteArray(), DEFAULT);
-                                Single.getInstance().female.add(img1w);
+//                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                                selectedImage1.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img1w = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().female.add(img1w);
                                 final InputStream imageStream2 = getContentResolver().openInputStream(imageUri2);
                                 final Bitmap selectedImage2 = BitmapFactory.decodeStream(imageStream2);
                                 view5.setImageBitmap(selectedImage2);
-                                baos = new ByteArrayOutputStream();
-                                selectedImage2.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                                String img2w = encodeToString(baos.toByteArray(), DEFAULT);
-                                Single.getInstance().female.add(img2w);
+//                                baos = new ByteArrayOutputStream();
+//                                selectedImage2.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img2w = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().female.add(img2w);
                                 final InputStream imageStream3 = getContentResolver().openInputStream(imageUri3);
                                 final Bitmap selectedImage3 = BitmapFactory.decodeStream(imageStream3);
                                 view6.setImageBitmap(selectedImage3);
-                                baos = new ByteArrayOutputStream();
-                                selectedImage3.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                                String img3w = encodeToString(baos.toByteArray(), DEFAULT);
-                                Single.getInstance().female.add(img3w);
+//                                baos = new ByteArrayOutputStream();
+//                                selectedImage3.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                                String img3w = encodeToString(baos.toByteArray(), DEFAULT);
+//                                Single.getInstance().female.add(img3w);
                             }
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
