@@ -6,117 +6,210 @@
     android:layout_height="match_parent"
     android:background="@color/MainBackgroundColor">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="40dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:orientation="horizontal">
-
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="как деловых отношений     -"
-                android:textColor="@color/main_color"
-                android:textSize="17dp"
+                android:paddingBottom="15dp"
+                android:text="Совместимость пары:"
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="75dp"
-                android:layout_height="23dp"
-                android:layout_marginLeft="20dp"
-                android:padding="3dp"
-                android:background="@drawable/output_m_design"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:text="0 лет"
-                android:textColor="@color/main_color" />
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="как деловых отношений     -   "
+                    android:textColor="@color/main_color"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="75dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/output_m_design"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0 лет"
+                    android:textColor="@color/main_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="как семейных отношений   -  "
+                    android:textColor="@color/main_color_pink"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="75dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/output_w_design"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0 лет"
+                    android:textColor="@color/main_color_pink" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="как семейных отношений   -"
-                android:textColor="@color/main_color_pink"
-                android:textSize="17dp"
+                android:paddingBottom="15dp"
+                android:text="Тип личности"
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textView_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/output_m_design_type"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="TextView"
+                    android:textColor="@color/main_color"
+                    android:textSize="13sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textView_w"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/output_w_design_type"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="TextView"
+                    android:textColor="@color/main_color_pink"
+                    android:textSize="13sp" />
+
+            </FrameLayout>
+
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="75dp"
-                android:layout_height="23dp"
-                android:padding="3dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/output_w_design"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:text="0 лет"
-                android:textColor="@color/main_color_pink" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Тип характера"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textView_m2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/output_m_design_type"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="TextView"
+                    android:textColor="@color/main_color"
+                    android:textSize="13sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/textView_w2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/output_w_design_type"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="TextView"
+                    android:textColor="@color/main_color_pink"
+                    android:textSize="13sp" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/button_instruction_back"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/warning_button_design"
+                android:onClick="startMain"
+                android:text="    Вернуться на главную    "
+                android:textColor="@drawable/warning_button_design" />
+
         </LinearLayout>
-
-
-
-        <FrameLayout
-            android:layout_width="350dp"
-            android:layout_height="200dp">
-
-            <TextView
-                android:id="@+id/textView_m"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="Характеристика мужчины"
-                android:textColor="@color/main_color_pink"
-                android:textSize="12sp"
-                android:background="@drawable/male_result"/>
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="350dp"
-            android:layout_marginTop="10dp"
-            android:layout_height="200dp">
-
-            <TextView
-                android:id="@+id/textView_w"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="12sp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:layout_height="match_parent"
-                android:textColor="@color/main_color"
-                android:text="Характеристика женщины"
-                android:background="@drawable/female_result"/>
-
-        </FrameLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:background="@color/main_color">
 
         <TextView
@@ -131,28 +224,5 @@
             android:textSize="17sp" />
 
     </FrameLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Совместимость пары:"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-
-    <Button
-        android:id="@+id/button_instruction_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/warning_button_design"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:onClick="startMain"
-        android:textColor="@drawable/warning_button_design"
-        android:text="   Вернуться на главную   " />
 
 </RelativeLayout>

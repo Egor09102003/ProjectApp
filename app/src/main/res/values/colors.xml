@@ -9,6 +9,8 @@
     <color name="purple_700">#FFFFFF</color>
     <color name="purple_200">#FFFFFF</color>
     <color name="warning_text">#64879e</color>
+    <color name="background_m">#EAF5FF</color>
+    <color name="background_w">#FFEAF5</color>
     <color name="color_upload_men">#C8D7FF</color>
     <color name="teal_200">#FFFFFFF1</color>
     <color name="teal_700">#FFFFFFF2</color>
