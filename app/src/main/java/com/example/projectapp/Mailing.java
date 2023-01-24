@@ -30,7 +30,6 @@ public class Mailing extends AppCompatActivity {
         String answer = ((TextInputEditText) findViewById(R.id.input1)).getText().toString();
         JSONObject big_json = new JSONObject(res);
         JSONObject images = new JSONObject();
-        big_json.put("images", images);
         big_json.put("email", answer);
         if (!answer.isEmpty() && isEmailValid(answer)) {
             Intent intent = new Intent(this, Results.class);
