@@ -102,7 +102,7 @@ public class SMOL_W extends AppCompatActivity {
 
     public void startCheck(View view) throws JSONException {
         if (i == 70) {
-            Intent intent = new Intent(this, Results.class);
+            Intent intent = new Intent(this, Mailing.class);
             if (answer == 1)
                 json_answers.put(true);
             else
@@ -129,7 +129,8 @@ public class SMOL_W extends AppCompatActivity {
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
             findViewById(R.id.bno).setBackgroundResource(R.drawable.click_button);
             TextView textView = findViewById(R.id.question);
-            textView.setText(questions[i]);
+            if (i < 71)
+                textView.setText(questions[i]);
         }
     }
 }

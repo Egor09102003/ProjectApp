@@ -70,34 +70,31 @@
                 android:textColor="@color/main_color_pink" />
         </LinearLayout>
 
+
+
         <FrameLayout
-            android:layout_width="320dp"
-            android:layout_height="134dp">
+            android:layout_width="350dp"
+            android:layout_height="200dp">
 
             <TextView
                 android:id="@+id/textView_m"
                 android:layout_width="match_parent"
-                android:gravity="center"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/roboto_bold"
-                android:textSize="12sp"
+                android:gravity="center"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:layout_height="match_parent"
-                android:textColor="@color/main_color"
-                android:text="TextView" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/male_result" />
+                android:text="TextView"
+                android:textColor="@color/main_color_pink"
+                android:textSize="12sp"
+                android:background="@drawable/male_result"/>
 
         </FrameLayout>
 
         <FrameLayout
-            android:layout_width="320dp"
+            android:layout_width="350dp"
             android:layout_marginTop="10dp"
-            android:layout_height="134dp">
+            android:layout_height="200dp">
 
             <TextView
                 android:id="@+id/textView_w"
@@ -108,14 +105,9 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:layout_height="match_parent"
-                android:textColor="@color/main_color_pink"
-                android:text="TextView" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/female_result" />
+                android:textColor="@color/main_color"
+                android:text="TextView"
+                android:background="@drawable/female_result"/>
 
         </FrameLayout>
 
