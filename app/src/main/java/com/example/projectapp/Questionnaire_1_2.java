@@ -24,12 +24,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class Questionnaire_1_2 extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       //  this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_questionnaire12);
-
     }
 
     public void startCheck(View view) throws JSONException, IOException {

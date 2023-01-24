@@ -1,6 +1,14 @@
 package com.example.projectapp;
 
+import static android.util.Base64.DEFAULT;
+import static android.util.Base64.encodeToString;
+import static java.util.Base64.*;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -16,17 +24,24 @@ import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.entity.S
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.impl.client.BasicResponseHandler;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.impl.client.HttpClients;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Base64;
 
 public class Results extends AppCompatActivity {
 
     String res = null;
     String id;
     public String data;
+    String IMAGES;
 
+    @SuppressLint("WrongThread")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +49,34 @@ public class Results extends AppCompatActivity {
 
         String q = getIntent().getStringExtra("mailing");
         res = q;
+        JSONArray male = new JSONArray();
+        JSONArray female = new JSONArray();
+        ArrayList<Bitmap> male_bit = Single.getMale();
+        ArrayList<Bitmap> female_bit = Single.getFemale();
+        for (int i = 0; i < 3; i++) {
+            Bitmap bitmap_male = male_bit.get(i);
+            Bitmap bitmap_female = female_bit.get(i);
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap_male.compress(Bitmap.CompressFormat.PNG, 100, bytes);
+            bitmap_female.compress(Bitmap.CompressFormat.PNG, 100, bytes);
+            byte[] byteArr_male = bytes.toByteArray();
+            byte[] byteArr_female = bytes.toByteArray();
+            String encoded_male = encodeToString(byteArr_male, DEFAULT);
+            String encoded_female = encodeToString(byteArr_female, DEFAULT);
+            male.put(encoded_male);
+            female.put(encoded_female);
+        }
+        JSONObject images = new JSONObject();
+        try {
+            images.put("male_images", male);
+            images.put("female_images", female);
+            JSONObject res_json = new JSONObject(res);
+            res_json.put("images", images);
+            res = res_json.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        System.out.println(res);
 
         AsyncTask.execute(new Runnable() {
             @Override
@@ -94,10 +137,6 @@ public class Results extends AppCompatActivity {
 
             }
         });
-
-
-
-        System.out.println(data);
     }
     public void startMain(View view) {
         Intent intent = new Intent(this, Main_page.class);
