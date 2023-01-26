@@ -10,7 +10,7 @@
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:background="@color/main_color">
 
         <TextView
@@ -22,7 +22,7 @@
             android:paddingRight="10dp"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Пожалуйста, пройдите опрос(для мужчины):"
+            android:text="Пожалуйста, пройдите опрос(для мужчины, 71 вопрос):"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="17sp" />
@@ -31,10 +31,10 @@
 
     <LinearLayout
         android:layout_width="327dp"
-        android:layout_height="400dp"
+        android:layout_height="390dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/question_design"
         android:orientation="vertical">
 
@@ -91,7 +91,7 @@
         android:background="@drawable/warning_button_design"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="15dp"
         android:onClick="startCheck"
         android:textColor="@drawable/warning_button_design"
         android:text="Далее" />
@@ -100,7 +100,8 @@
         android:id="@+id/textViewError"
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="630dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
         android:layout_height="wrap_content"
         android:textColor="@color/warning_text"
         android:text="" />

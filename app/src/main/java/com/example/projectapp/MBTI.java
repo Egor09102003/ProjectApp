@@ -236,6 +236,8 @@ public class MBTI extends AppCompatActivity {
             findViewById(R.id.byes).setBackgroundResource(R.drawable.click_button);
             Button b1 = (Button) findViewById(R.id.byes);
             if (i < 55) {
+                TextView textCount = (TextView) findViewById(R.id.textViewCount);
+                textCount.setText(Integer.toString(i + 1) + "/56");
                 b1.setText(questions[i * 2]);
                 findViewById(R.id.bno).setBackgroundResource(R.drawable.click_button);
                 Button b2 = (Button) findViewById(R.id.bno);

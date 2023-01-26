@@ -7,10 +7,49 @@
     android:background="@color/MainBackgroundColor"
     tools:context=".Warning">
 
+    <ImageButton
+        android:id="@+id/button_warning_back"
+        android:layout_width="66dp"
+        android:layout_height="83dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:contentDescription="button_warning_back"
+        android:onClick="startMain"
+        app:srcCompat="@drawable/warning_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="casual"
+            android:lineHeight="15dp"
+            android:text="@string/main_text_warning"
+            android:textColor="@color/main_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            app:srcCompat="@drawable/photo_warning" />
+
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="50dp"
         android:background="@color/main_color">
 
         <TextView
@@ -23,39 +62,5 @@
             android:textColor="@color/white"
             android:textSize="17sp" />
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:lineHeight="23dp"
-        android:layout_marginTop="120dp"
-        android:fontFamily="casual"
-        android:text="@string/main_text_warning"
-        android:textColor="@color/main_color"
-        android:textSize="16sp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
-        app:srcCompat="@drawable/photo_warning" />
-
-    <ImageButton
-        android:id="@+id/button_warning_back"
-        android:layout_width="66dp"
-        android:layout_height="83dp"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="13dp"
-        android:background="@color/white"
-        android:contentDescription="button_warning_back"
-        android:onClick="startMain"
-        app:srcCompat="@drawable/warning_back" />
 
 </RelativeLayout>

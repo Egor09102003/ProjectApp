@@ -7,6 +7,113 @@
     android:background="@color/MainBackgroundColor"
     tools:context=".Photo_upload">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="255dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="50dp"
+            >
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:contentDescription="upload_m"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/male_upload" />
+
+            <ImageView
+                android:id="@+id/test_view"
+                android:layout_width="55dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/photo_1_m" />
+
+            <ImageView
+                android:id="@+id/imageview7"
+                android:layout_width="53dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/photom2" />
+
+            <ImageView
+                android:id="@+id/imageview10"
+                android:layout_width="55dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/photo_3_m" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="255dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                android:contentDescription="upload_w"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/female_upload" />
+
+            <ImageView
+                android:id="@+id/imageview13"
+                android:layout_width="55dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/photo_1_w" />
+
+            <ImageView
+                android:id="@+id/imageview14"
+                android:layout_width="53dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/photo_2_w" />
+
+            <ImageView
+                android:id="@+id/imageview15"
+                android:layout_width="55dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/photo_3_w" />
+
+        </FrameLayout>
+    </LinearLayout>
+
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +122,7 @@
     <FrameLayout
         android:id="@+id/layout_header_title_upload"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:background="@color/main_color">
 
         <TextView
@@ -38,7 +145,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/warning_button_design"
         android:contentDescription="warning_button"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:text="   Какие фотографии не подойдут?   "
         android:layout_centerHorizontal="true"
         android:textColor="@drawable/warning_button_design"
@@ -47,7 +154,7 @@
     <ImageView
         android:id="@+id/image_warning_left"
         android:layout_width="wrap_content"
-        android:layout_marginTop="157dp"
+        android:layout_marginTop="107dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
         android:src="@drawable/icon_for_warning" />
@@ -58,7 +165,7 @@
         android:layout_marginRight="55dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="157dp"
+        android:layout_marginTop="107dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/icon_for_warning" />
 
@@ -87,106 +194,6 @@
         android:text="Далее"
         android:textColor="@color/black"
         android:textSize="14sp" />
-
-    <FrameLayout
-        android:layout_width="255dp"
-        android:layout_marginTop="250dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="144dp">
-
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:background="@color/white"
-            android:contentDescription="upload_m"
-            app:srcCompat="@drawable/cloud" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/male_upload" />
-
-        <ImageView
-            android:id="@+id/test_view"
-            android:layout_width="55dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="70dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/photo_1_m" />
-
-        <ImageView
-            android:id="@+id/imageview7"
-            android:layout_width="53dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/photom2" />
-
-        <ImageView
-            android:id="@+id/imageview10"
-            android:layout_width="55dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/photo_3_m" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="255dp"
-        android:layout_marginTop="450dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="144dp">
-
-        <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:background="@color/white"
-            android:contentDescription="upload_w"
-            app:srcCompat="@drawable/cloud" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/female_upload" />
-
-        <ImageView
-            android:id="@+id/imageview13"
-            android:layout_width="55dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="70dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/photo_1_w" />
-
-        <ImageView
-            android:id="@+id/imageview14"
-            android:layout_width="53dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/photo_2_w" />
-
-        <ImageView
-            android:id="@+id/imageview15"
-            android:layout_width="55dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/photo_3_w" />
-
-    </FrameLayout>
 
     <TextView
         android:id="@+id/textView12"
